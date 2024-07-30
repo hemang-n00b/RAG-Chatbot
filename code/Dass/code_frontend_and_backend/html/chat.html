@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gemini API</title>
+  <!-- Bootstrap CSS -->
+  {% load static %}
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href = "{% static 'styles_chat.css' %}" rel = "stylesheet">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row" style="height: 100%;">
+      <div class="col-2 color-70 container-fluid" style="height: 100%;">
+        <div class="col-auto">
+          <div style="color: #fff;margin-left: 65px;">
+              <h2><b>CoviCare </b></h2>
+          </div>
+      </div>
+        <div class="new-chat d-flex justify-content-center align-items-center">
+            <button class="btn btn-dark btn-lg btn-block w-100" id="newChatBtn" type="button">New Chat</button>
+        </div>
+        <div class="chat-list">
+          <ul class="list-group list-group-flush" id="recent-searches-list">
+          </ul>
+          </div>
+    </div>
+    
+      <div class="col-10 color-30" style="height: 100%;">
+        <div class="chat-main">
+          
+         <div class="container">
+            <div class="row align-items-center">
+                <!-- <div class="col-auto">
+                    <div class="chat-header text-center">
+                        <h2><b>CoviCare Assistant</b></h2>
+                    </div>
+                </div> -->
+                <div class="col-auto logoutopt" style="margin-left: auto;">
+                    <div class="btn-group" role="group">
+                        <!-- <div class="c1">
+                            
+                            <span id="profileImage"></span>
+                            <span id="fName">Rahul</span>
+                            <span id="lName">Singal</span>
+                        </div> -->
+                        <!-- <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: rgb(29, 27, 27); border-color: rgb(29, 27, 27);">
+                            User Options
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
+                        </ul> -->
+                        <div class="btn-group" role="group">
+                          <div class="c1" id="profileContainer">
+                              <span id="profileImage"></span>
+                              <span id="fName">{{ firstname }}</span>
+                              <span id="lName">{{ lastname }}</span>
+                          </div>
+                          <ul class="dropdown-menu dropdown-menu-end" id="userOptionsMenu">
+                              <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
+                          </ul>
+                      </div>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+          
+         
+        
+        
+          <div class="chat-messages" id="chatMessages">
+            <!-- <h1>Loading Effect Example</h1>
+            <button id="loadButton">Load Content</button> -->
+          </div>
+          <div class="input-container">
+            <input type="text" id="userInput" class="form-control chat-input" placeholder="Type your message...">
+            <button id="sendBtn" class="btn send-btn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
+                <path
+                  d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z" />
+              </svg></button>
+          </div>
+          <!-- <div class="justify-content-center align-items-center">
+            <a href="{% url 'about' %}"><p class="about-link">About Us</p></a>
+        </div> -->
+        
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src = "{% static 'typing_script.js' %}"></script>
+
+  
+
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+</body>
+
+</html>

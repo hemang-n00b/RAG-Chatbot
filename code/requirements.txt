@@ -1,0 +1,14 @@
+Django
+langchain-chroma
+langchain-community
+langchain-text-splitters
+nltk
+google
+transformers
+bert-score
+pandas
+tqdm
+google.generativeai
+pandas
+tqdm
+sentence-transformers
